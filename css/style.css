@@ -61,7 +61,7 @@ body {
 .heading-primary {
   color: #fff;
   text-transform: uppercase;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 
   backface-visibility: hidden; /* pour éviter le shakky sur l'animation*/
 }
@@ -123,6 +123,8 @@ body {
   padding: 15px 40px;
   border-radius: 1000px;
   transition: all 0.2s;
+
+  position: relative;
 }
 
 .btn:hover {
@@ -139,4 +141,43 @@ body {
   color: #1c1c1a;
   background-color: #fff;
   text-align: center;
+}
+
+.btn::after {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+
+  transition: all 0.4s;
+}
+
+.btn-white::after {
+  background-color: white;
+}
+
+.btn:hover::after {
+  transform: scaleX(1.5) scaleY(1.7);
+  opacity: 0;
+}
+
+.btn-animated {
+  animation: moveInBottom 0.5s ease-in-out 0.5s;
+  animation-fill-mode: backwards;
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
 }
