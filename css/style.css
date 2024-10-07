@@ -13,14 +13,17 @@ myLighterDark : #353531
 
 */
 
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  box-sizing: inherit;
 }
 
 html {
-  font-size: 10px;
+  font-size: 62.5%;
 }
 
 body {
@@ -30,6 +33,8 @@ body {
   line-height: 1.7;
   color: #777;
   padding: 3rem; /* n'est pas inhérited */
+
+  box-sizing: border-box;
 }
 
 .header {
@@ -43,17 +48,17 @@ body {
   position: relative;
 }
 
-.logo-box {
+.header__logo-box {
   position: absolute;
   top: 4rem;
   left: 4rem;
 }
 
-.logo {
+.header__logo {
   height: 15rem;
 }
 
-.text-box {
+.header__text-box {
   position: absolute;
   top: 40%;
   left: 50%;
@@ -70,7 +75,7 @@ body {
   backface-visibility: hidden; /* pour éviter le shakky sur l'animation*/
 }
 
-.heading-primary-main {
+.heading-primary--main {
   display: block;
   font-size: 6rem;
   font-weight: 400;
@@ -79,7 +84,7 @@ body {
   animation: moveInleft 1s ease-in-out;
 }
 
-.heading-primary-sub {
+.heading-primary--sub {
   display: block;
   font-size: 2rem;
   font-weight: 700;
@@ -141,7 +146,7 @@ body {
   box-shadow: 0 0.5rem 0.5rem rgba(255, 255, 255, 0.2);
 }
 
-.btn-white {
+.btn--white {
   color: #1c1c1a;
   background-color: #fff;
   text-align: center;
@@ -161,7 +166,7 @@ body {
   transition: all 0.4s;
 }
 
-.btn-white::after {
+.btn--white::after {
   background-color: white;
 }
 
@@ -170,7 +175,7 @@ body {
   opacity: 0;
 }
 
-.btn-animated {
+.btn--animated {
   animation: moveInBottom 0.5s ease-in-out 0.5s;
   animation-fill-mode: backwards;
 }
