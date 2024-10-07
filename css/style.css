@@ -61,14 +61,10 @@ body {
 .heading-primary {
   color: #fff;
   text-transform: uppercase;
+  margin-bottom: 30px;
 
   backface-visibility: hidden; /* pour éviter le shakky sur l'animation*/
 }
-
-/* h1 {
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-} */
 
 .heading-primary-main {
   display: block;
