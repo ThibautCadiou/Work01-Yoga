@@ -1,0 +1,8 @@
+// méthode de Jonas pour ne pas avoir une hauteur de 0
+@mixin clearfix {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
