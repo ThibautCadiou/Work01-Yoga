@@ -9,7 +9,7 @@
   transition: all 0.3s;
 
   &__icon {
-    font-size: 6rem;
+    font-size: 8rem;
     margin-bottom: 0.5rem;
     background-image: linear-gradient(to right, $my-gradient-1, $my-gradient-2);
     display: inline-block;
@@ -21,11 +21,11 @@
     letter-spacing: 2px;
   }
 
+  &__img {
+    height: 12rem;
+  }
+
   &:hover {
     transform: translateY(-1.55rem) scale(1.03);
   }
-
-  //   &__text {
-  //     // border: solid blue 2px;
-  //   }
 }
