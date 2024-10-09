@@ -38,15 +38,15 @@ body {
   font-size: 3.5rem;
   text-transform: uppercase;
   font-weight: 700;
-  background-image: linear-gradient(to right, $my-dark, $my-lighter-dark);
+  background-image: linear-gradient(to right, $my-gradient-1, $my-gradient-2);
   display: inline-block;
 
   //pour le gradient sur le text
   -webkit-background-clip: text;
   background-clip: text;
-
   color: transparent;
   letter-spacing: 2px;
+
   transition: all 0.2s;
 
   &:hover {
