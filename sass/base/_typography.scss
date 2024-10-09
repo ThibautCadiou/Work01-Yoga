@@ -33,3 +33,39 @@ body {
     animation: moveInRight 1s ease-in-out;
   }
 }
+
+.heading-secondary {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-image: linear-gradient(to right, $my-gradient-1, $my-gradient-2);
+  display: inline-block;
+
+  //pour le gradient sur le text
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  letter-spacing: 2px;
+
+  transition: all 0.2s;
+
+  &:hover {
+    transform: skewY(2deg) skewY(2deg) scale(1.1);
+    /* offset-x | offset-y | blur-radius | color */
+    text-shadow: 0.5rem 0.5rem 0.5rem rgba($color: black, $alpha: 0.2);
+  }
+}
+
+.heading-tertiary {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.paragraph {
+  font-size: 1.6rem;
+
+  &:not(:last-child) {
+    margin-bottom: 4rem;
+  }
+}

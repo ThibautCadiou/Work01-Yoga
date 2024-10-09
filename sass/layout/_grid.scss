@@ -1,7 +1,7 @@
 .row {
   max-width: $grid-width;
-  background-color: $my-grey;
-  color: $my-white;
+  background-color: none;
+  // color: $my-grey;
   margin: 0 auto;
 
   &:not(:last-child) {
@@ -13,7 +13,7 @@
   //   Permet de sélectionner tout les élément ayant un nom de classe commencant par ...
 
   [class^='col-'] {
-    background-color: orangered;
+    background-color: none;
     float: left;
 
     &:not(:last-child) {
