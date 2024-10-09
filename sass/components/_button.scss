@@ -63,3 +63,28 @@
     }
   }
 }
+
+.btn-text {
+  &:link,
+  &:visited {
+    font-size: $default-fontsize;
+    color: $my-blue;
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 1px solid $my-blue;
+    padding: 10px;
+    transition: all 0.2s;
+  }
+
+  &:hover {
+    color: white;
+    background-color: $my-blue;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.5);
+    transform: translateY(0px);
+  }
+}
