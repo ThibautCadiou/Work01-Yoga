@@ -118,6 +118,20 @@ body {
 .u-margin-top-big {
   margin-top: 8rem; }
 
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.5;
+  overflow: hidden; }
+  .bg-video__content {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; }
+
 .btn:link {
   display: inline-block;
   text-transform: uppercase;
@@ -351,6 +365,52 @@ body {
   .feature-box:hover {
     transform: translateY(-1.55rem) scale(1.03); }
 
+.story {
+  width: 75%;
+  margin: 0 auto;
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.4);
+  background-color: #fff;
+  border-radius: 3px;
+  padding: 5rem;
+  padding-left: 9rem;
+  font-size: 1.6rem;
+  transform: skewX(-12deg);
+  position: relative; }
+  .story > * {
+    transform: skewX(12deg); }
+  .story__shape {
+    width: 15rem;
+    height: 15rem;
+    float: left;
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    shape-outside: circle(50% at 50% 50%);
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    transform: translateX(-2.5rem) skewX(12deg); }
+  .story__img {
+    height: 100%;
+    transform: translateX(-4rem) scale(1.5);
+    transition: all 0.3s; }
+  .story__text {
+    transform: skewX(12deg); }
+  .story__caption {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 20%);
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    text-align: center;
+    opacity: 0;
+    transition: all 0.3s; }
+  .story:hover .story__caption {
+    opacity: 1;
+    transform: translate(-50%, -50%); }
+  .story:hover .story__img {
+    transform: translateX(-4rem) scale(1);
+    filter: blur(3px) brightness(80%); }
+
 .header {
   height: 95vh;
   background-image: linear-gradient(to bottom, rgba(28, 28, 26, 0.8), rgba(70, 70, 64, 0.8)), url("../img/hero.jpg");
@@ -417,3 +477,7 @@ body {
   background-color: #f7f7f7;
   padding: 20rem 0 10rem 0;
   margin-top: -11rem; }
+
+.section-stories {
+  padding: 10rem 0;
+  position: relative; }
