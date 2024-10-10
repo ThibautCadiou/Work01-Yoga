@@ -71,6 +71,16 @@
       background-color: $color-primary;
     }
   }
+
+  &--dark {
+    color: white;
+    background-color: $my-dark;
+    text-align: center;
+
+    &::after {
+      background-color: $my-dark;
+    }
+  }
 }
 
 .btn-text {
