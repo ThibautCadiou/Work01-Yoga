@@ -2,14 +2,13 @@
   perspective: 150rem;
   -moz-perspective: 150rem;
   position: relative;
-  height: 50rem;
+  height: 55rem;
   width: 100%;
 
   &__side {
-    color: black;
     font-size: 3rem;
 
-    height: 50rem;
+    height: 55rem;
     transition: all 0.8s ease-in-out;
 
     position: absolute;
@@ -25,8 +24,8 @@
       background-color: white;
     }
 
+    //BACKSIDE STYLING
     &--back {
-      background-color: white;
       transform: rotateY(180deg);
 
       &-1 {
@@ -68,6 +67,7 @@
     background-position: center;
     height: 23rem;
     background-blend-mode: screen;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 
     &--1 {
@@ -82,50 +82,89 @@
       background-image: url('../img/nat-10.jpg'),
         linear-gradient(to bottom right, $color-tertiary-light, $color-tertiary-dark);
     }
-
-    //Pour la démo 1 avce les cartes pour arkanhom
-    // border: solid 2px white;
-    // &--1 {
-    //   background-image: url(/img/intervenants/intervenant-01.JPG);
-    //   // padding: 200px;
-    // }
-
-    // &--2 {
-    //   background-image: url(/img/intervenants/intervenant-02.JPG);
-    //   // padding: 200px;
-    // }
-    // &--3 {
-    //   background-image: url(/img/intervenants/intervenant-03.JPG);
-    //   // padding: 200px;
-    // }
-    // &--4 {
-    //   background-image: url(/img/intervenants/intervenant-04.JPG);
-    //   // padding: 200px;
-    // }
-    // &--5 {
-    //   background-image: url(/img/intervenants/intervenant-05.JPG);
-    //   // padding: 200px;
-    // }
-    // &--6 {
-    //   background-image: url(/img/intervenants/intervenant-06.JPG);
-    //   // padding: 200px;
-    // }
   }
 
-  //Pour la démo 1 avce les cartes pour arkanhom
+  &__heading {
+    font-size: 2.8rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: right;
+    color: $color-white;
+    position: absolute;
+    top: 6rem;
+    right: 2rem;
+    width: 75%;
+  }
 
-  // &__heading {
-  //   position: absolute;
-  //   // text-align: center;
-  //   width: 100%;
-  //   bottom: 0%;
-  //   left: 50%;
-  //   transform: translate(-50%, 0%);
+  &__heading-span {
+    padding: 1rem 1.5rem;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    &--1 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-light, 0.85),
+        rgba($color-primary-dark, 0.85)
+      );
+    }
+    &--2 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-secondary-light, 0.85),
+        rgba($color-secondary-dark, 0.85)
+      );
+    }
+    &--3 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-tertiary-light, 0.85),
+        rgba($color-tertiary-dark, 0.85)
+      );
+    }
+  }
 
-  //   color: black;
-  //   font-size: 3.6rem;
-  //   // border: solid 2px red;
-  //   height: fit-content;
-  //   background-color: white;
-  // }
+  &__details {
+    padding: 3rem;
+    ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto;
+
+      li {
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 1rem;
+
+        &:not(:last-child) {
+          border-bottom: 1px solid $color-grey-light-2;
+        }
+      }
+    }
+  }
+
+  // BACK SIDE STYLING
+  &__cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    font-size: initial;
+  }
+
+  &__price-box {
+    color: white;
+    text-align: center;
+    margin-bottom: 8rem;
+  }
+
+  &__price-only {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+  }
+
+  &__price-value {
+    font-size: 6rem;
+    font-weight: 100;
+  }
 }
