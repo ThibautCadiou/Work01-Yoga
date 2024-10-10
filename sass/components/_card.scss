@@ -17,6 +17,8 @@
     left: 0;
     width: 100%;
     backface-visibility: hidden;
+    border-radius: 3px;
+    overflow: hidden;
     box-shadow: 0 1.4rem 4rem rgba(0, 0, 0, 0.5);
 
     &--front {
@@ -28,7 +30,25 @@
       transform: rotateY(180deg);
 
       &-1 {
-        background-image: linear-gradient(to bottom right, $my-gradient-10, $my-gradient-11);
+        background-image: linear-gradient(
+          to bottom right,
+          $color-primary-light,
+          $color-primary-dark
+        );
+      }
+      &-2 {
+        background-image: linear-gradient(
+          to bottom right,
+          $color-secondary-light,
+          $color-secondary-dark
+        );
+      }
+      &-3 {
+        background-image: linear-gradient(
+          to bottom right,
+          $color-tertiary-light,
+          $color-tertiary-dark
+        );
       }
     }
   }
@@ -46,46 +66,66 @@
     height: 100%;
     background-size: cover;
     background-position: center;
-    // border: solid 2px white;
-    &--1 {
-      background-image: url(/img/intervenants/intervenant-01.JPG);
-      // padding: 200px;
-    }
+    height: 23rem;
+    background-blend-mode: screen;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 
+    &--1 {
+      background-image: url('../img/nat-4.jpg'),
+        linear-gradient(to bottom right, $color-primary-light, $color-primary-dark);
+    }
     &--2 {
-      background-image: url(/img/intervenants/intervenant-02.JPG);
-      // padding: 200px;
+      background-image: url('../img/nat-6.jpg'),
+        linear-gradient(to bottom right, $color-secondary-light, $color-secondary-dark);
     }
     &--3 {
-      background-image: url(/img/intervenants/intervenant-03.JPG);
-      // padding: 200px;
+      background-image: url('../img/nat-10.jpg'),
+        linear-gradient(to bottom right, $color-tertiary-light, $color-tertiary-dark);
     }
-    &--4 {
-      background-image: url(/img/intervenants/intervenant-04.JPG);
-      // padding: 200px;
-    }
-    &--5 {
-      background-image: url(/img/intervenants/intervenant-05.JPG);
-      // padding: 200px;
-    }
-    &--6 {
-      background-image: url(/img/intervenants/intervenant-06.JPG);
-      // padding: 200px;
-    }
+
+    //Pour la démo 1 avce les cartes pour arkanhom
+    // border: solid 2px white;
+    // &--1 {
+    //   background-image: url(/img/intervenants/intervenant-01.JPG);
+    //   // padding: 200px;
+    // }
+
+    // &--2 {
+    //   background-image: url(/img/intervenants/intervenant-02.JPG);
+    //   // padding: 200px;
+    // }
+    // &--3 {
+    //   background-image: url(/img/intervenants/intervenant-03.JPG);
+    //   // padding: 200px;
+    // }
+    // &--4 {
+    //   background-image: url(/img/intervenants/intervenant-04.JPG);
+    //   // padding: 200px;
+    // }
+    // &--5 {
+    //   background-image: url(/img/intervenants/intervenant-05.JPG);
+    //   // padding: 200px;
+    // }
+    // &--6 {
+    //   background-image: url(/img/intervenants/intervenant-06.JPG);
+    //   // padding: 200px;
+    // }
   }
 
-  &__heading {
-    position: absolute;
-    // text-align: center;
-    width: 100%;
-    bottom: 0%;
-    left: 50%;
-    transform: translate(-50%, 0%);
+  //Pour la démo 1 avce les cartes pour arkanhom
 
-    color: black;
-    font-size: 3.6rem;
-    // border: solid 2px red;
-    height: fit-content;
-    background-color: white;
-  }
+  // &__heading {
+  //   position: absolute;
+  //   // text-align: center;
+  //   width: 100%;
+  //   bottom: 0%;
+  //   left: 50%;
+  //   transform: translate(-50%, 0%);
+
+  //   color: black;
+  //   font-size: 3.6rem;
+  //   // border: solid 2px red;
+  //   height: fit-content;
+  //   background-color: white;
+  // }
 }
