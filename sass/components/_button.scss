@@ -1,14 +1,6 @@
 .btn {
-  &:link {
-    display: inline-block;
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 1.5rem 4rem;
-    border-radius: 10rem;
-    transition: all 0.2s;
-
-    position: relative;
-  }
+  &,
+  &:link,
   &:visited {
     display: inline-block;
     text-transform: uppercase;
@@ -16,9 +8,14 @@
     padding: 1.5rem 4rem;
     border-radius: 10rem;
     transition: all 0.2s;
-
     position: relative;
+    font-size: $default-fontsize;
+
+    //Change for the <button> element
+    border: none;
+    cursor: pointer;
   }
+
   &:hover {
     transform: translateY(-0.3rem);
     box-shadow: 0 1rem 2rem rgba(255, 255, 255, 0.5);
