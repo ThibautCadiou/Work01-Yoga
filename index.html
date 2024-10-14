@@ -18,7 +18,9 @@
   <body>
     <div class="nav">
       <input type="checkbox" class="navigation__checkbox" id="navi-toggle" />
-      <label for="navi-toggle" class="navigation__button">MENU</label>
+      <label for="navi-toggle" class="navigation__button">
+        <span class="navigation__icon"></span>
+      </label>
 
       <div class="navigation__background">&nbsp;</div>
 
@@ -214,7 +216,7 @@
                       <p class="card__price-only">Only</p>
                       <p class="card__price-value">200€</p>
                     </div>
-                    <a href="#" class="btn btn--white">S'inscrire</a>
+                    <a href="#popup" class="btn btn--white">S'inscrire</a>
                   </div>
                 </div>
               </div>
@@ -244,7 +246,7 @@
                       <p class="card__price-only">Only</p>
                       <p class="card__price-value">180€</p>
                     </div>
-                    <a href="#" class="btn btn--white">S'inscrire</a>
+                    <a href="#popup" class="btn btn--white">S'inscrire</a>
                   </div>
                 </div>
               </div>
@@ -275,7 +277,7 @@
                       <p class="card__price-only">Only</p>
                       <p class="card__price-value">250€</p>
                     </div>
-                    <a href="#" class="btn btn--white">S'inscrire</a>
+                    <a href="#popup" class="btn btn--white">S'inscrire</a>
                   </div>
                 </div>
               </div>
@@ -363,14 +365,14 @@
                     <input type="radio" class="form__radio-input" id="small" name="size" />
                     <label for="small" class="form__radio-label">
                       <span class="form__radio-button"></span>
-                      Small tour group
+                      Individuel
                     </label>
                   </div>
                   <div class="form__radio-group">
                     <input type="radio" class="form__radio-input" id="large" name="size" />
                     <label for="large" class="form__radio-label">
                       <span class="form__radio-button"></span>
-                      Large tour group
+                      Groupe
                     </label>
                   </div>
                 </div>
@@ -408,5 +410,34 @@
         </div>
       </div>
     </footer>
+
+    <div class="popup" id="popup">
+      <div class="popup__content">
+        <div class="popup__left">
+          <img src="img/old/nat-8.jpg" alt="Tour photo" class="popup__img" />
+          <img src="img/old/nat-9.jpg" alt="Tour photo" class="popup__img" />
+        </div>
+        <div class="popup__right">
+          <a href="#section-tours" class="popup__close">&times;</a>
+          <h2 class="heading-secondary u-margin-bottom-medium">Demandez des renseignements</h2>
+          <h3 class="heading-tertiary u-margin-bottom-medium">
+            Important &ndash; Lisez ces informations avant de réserver un stage
+          </h3>
+          <p class="popup__text u-margin-bottom-medium">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam consequuntur alias
+            atque labore, velit blanditiis quam sit molestias Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Numquam consequuntur alias atque labore, velit blanditiis quam sit
+            molestiasLorem ipsum dolor sit amet consectetur adipisicing elit. Numquam consequuntur
+            alias atque labore, velit blanditiis quam sit molestiasLorem ipsum dolor sit amet
+            consectetur adipisicing elit. Numquam consequuntur alias atque labore, velit blanditiis
+            quam sit molestiasLorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
+            consequuntur alias atque labore, velit blanditiis quam sit molestiasLorem ipsum dolor
+            sit amet consectetur adipisicing elit. Numquam consequuntur alias atque labore, velit
+            blanditiis quam sit molestias
+          </p>
+          <a href="#" class="popup__button btn btn--green">Réservez</a>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
