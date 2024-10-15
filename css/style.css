@@ -1,4 +1,18 @@
 @charset "UTF-8";
+/*
+0 - 600px     : Mobile
+600 - 900px   : Tablet portrait
+900 - 1200px  : Tablet Landscape
+1200 - 1800px : Desktop (normal style)
+1800px +      : Large Desktop
+*/
+/* 
+$breakpoints pour les différents appareils
+- phone
+- tab-port
+- tab-land
+- big-desktop
+*/
 @keyframes moveInBottom {
   0% {
     opacity: 0;
@@ -38,6 +52,15 @@
 
 html {
   font-size: 62.5%; }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 125%; } }
 
 body {
   box-sizing: border-box;
