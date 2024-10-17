@@ -74,15 +74,15 @@
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 
     &--1 {
-      background-image: url('../img/nat-4.jpg'),
+      background-image: url('./img/nat-4.jpg'),
         linear-gradient(to bottom right, $color-primary-light, $color-primary-dark);
     }
     &--2 {
-      background-image: url('../img/nat-6.jpg'),
+      background-image: url('./img/nat-6.jpg'),
         linear-gradient(to bottom right, $color-secondary-light, $color-secondary-dark);
     }
     &--3 {
-      background-image: url('../img/nat-10.jpg'),
+      background-image: url('./img/nat-10.jpg'),
         linear-gradient(to bottom right, $color-tertiary-light, $color-tertiary-dark);
     }
   }
