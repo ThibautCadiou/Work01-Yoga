@@ -42,7 +42,6 @@
 
   &__nav {
     height: 100vh;
-    // width: 100%;
     position: fixed;
     top: 0;
     left: 0;
@@ -78,6 +77,9 @@
       background-image: linear-gradient(120deg, transparent 0%, transparent 50%, white 50%);
       background-size: 240%;
       transition: all 0.4s;
+
+      pointer-events: none; //patch pour le pb de présence des elts lors du survol
+      cursor: default;
       span {
         margin-right: 0.5rem;
         display: inline-block;
