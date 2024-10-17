@@ -18,7 +18,7 @@ $color-grey-light-2: #777;
 $color-grey-dark-2: #999;
 $color-grey-dark-3: #333;
 
-$color-primary: #1c1c1a;
+$color-primary-dark-black: #1c1c1a;
 $color-white: #fff;
 $color-black: #000;
 
@@ -40,9 +40,14 @@ $header-height: 95vh;
 $tip-height: 66%;
 $tip-height-offset: -0.34 * $header-height;
 
+$header-height-small: 66vh;
+// $tip-height-small: 80%;
+// $tip-height-offset-small: -0.2 * $header-height;
+
 $tip-padding-top: 15rem;
 
 // GRID
 $grid-width: 114rem;
 $gutter-vertical: 8rem;
+$gutter-vertical-small: 8rem;
 $gutter-horizontal: 8rem;

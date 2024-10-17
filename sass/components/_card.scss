@@ -5,20 +5,21 @@
   height: 55rem;
   width: 100%;
 
+  box-shadow: 0 1.4rem 4rem rgba(0, 0, 0, 0.5);
   &__side {
     font-size: 3rem;
 
-    height: 55rem;
+    height: 60rem;
     transition: all 0.4s ease-in-out;
 
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
+
     backface-visibility: hidden;
     border-radius: 3px;
     overflow: hidden;
-    box-shadow: 0 1.4rem 4rem rgba(0, 0, 0, 0.5);
 
     &--front {
       backface-visibility: hidden;
@@ -96,12 +97,21 @@
     top: 6rem;
     right: 2rem;
     width: 75%;
+    @include respond(tab-land) {
+      font-size: 2.5rem;
+      width: 80%;
+    }
   }
 
   &__heading-span {
     padding: 1rem 1.5rem;
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
+
+    @include respond(tab-port) {
+      padding: 0.5rem 1rem;
+    }
+
     &--1 {
       background-image: linear-gradient(
         to right bottom,
@@ -157,7 +167,7 @@
   &__price-box {
     color: white;
     text-align: center;
-    margin-bottom: 8rem;
+    margin-bottom: 0rem;
   }
 
   &__price-only {
@@ -168,5 +178,66 @@
   &__price-value {
     font-size: 6rem;
     font-weight: 100;
+  }
+
+  // RESPOND !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  @include respond(tab-port) {
+    height: auto;
+    border-radius: 3px;
+    background-color: white;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+
+    &__side {
+      font-size: 3rem;
+
+      height: auto;
+      transition: all 0.4s ease-in-out;
+
+      position: relative;
+
+      //BACKSIDE STYLING
+      &--back {
+        transform: rotateY(0);
+        clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+      }
+    }
+
+    &:hover &__side--front {
+      transform: rotateY(0);
+    }
+
+    &:hover &__side--back {
+      transform: rotateY(0deg);
+    }
+
+    //FRONT SIDE STYLING
+
+    // BACK SIDE STYLING
+    &__cta {
+      position: relative;
+      top: 0%;
+      left: 0%;
+      transform: translate(0);
+      width: 100%;
+      font-size: initial;
+      padding: 4rem;
+    }
+
+    &__price-box {
+      color: white;
+
+      margin-bottom: 3rem;
+    }
+
+    &__price-only {
+      font-size: 1.4rem;
+      text-transform: uppercase;
+    }
+
+    &__price-value {
+      font-size: 6rem;
+    }
   }
 }
